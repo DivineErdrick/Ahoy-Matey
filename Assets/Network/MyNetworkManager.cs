@@ -29,10 +29,17 @@ public class MyNetworkManager : NetworkManager {
     public override void OnStartClient (NetworkClient myClient) {
 
         Debug.Log(Time.timeSinceLevelLoad + ": Client start requested.");
+        InvokeRepeating("ConnectionWaitingDisplay", 0f, 1f);
     }
 
     public override void OnClientConnect(NetworkConnection myConn) {
 
+        CancelInvoke();
         Debug.Log(Time.timeSinceLevelLoad + ": Client has connected to IP: " + myConn.address);
+    }
+
+    void ConnectionWaitingDisplay () {
+
+        Debug.Log(".");
     }
 }
