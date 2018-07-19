@@ -26,7 +26,7 @@ public class Player : NetworkBehaviour {
         }
         if (CrossPlatformInputManager.GetAxis("Vertical") != 0) {
 
-            transform.Translate(Vector3.forward * CrossPlatformInputManager.GetAxis("Horizontal") * speed * Time.deltaTime);
+            transform.Translate(Vector3.forward * CrossPlatformInputManager.GetAxis("Vertical") * speed * Time.deltaTime);
         }
     }
 }
