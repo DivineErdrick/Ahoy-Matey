@@ -19,11 +19,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4094927832361466}
-  - component: {fileID: 114969056213704686}
-  - component: {fileID: 114287997757203726}
   - component: {fileID: 23026910926093726}
   - component: {fileID: 33024124679686458}
   - component: {fileID: 136199159448879928}
+  - component: {fileID: 114969056213704686}
+  - component: {fileID: 114287997757203726}
+  - component: {fileID: 114334521442447528}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -107,6 +108,18 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114334521442447528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1295554643024906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc95c13b97396949b9749e4b4e10ea1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
 --- !u!114 &114969056213704686
 MonoBehaviour:
   m_ObjectHideFlags: 1
