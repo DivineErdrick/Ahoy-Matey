@@ -9,8 +9,6 @@ public class Player : NetworkBehaviour {
     [Range(0f, 60f)]
     public float speed;
 
-    Camera myCamera;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -21,12 +19,6 @@ public class Player : NetworkBehaviour {
 
         if ( ! isLocalPlayer) {
             return;
-        }
-        Camera[] cameras = FindObjectsOfType<Camera>();
-        foreach (Camera camera in cameras) {
-            if (camera != myCamera) {
-                camera.gameObject.SetActive(false);
-            }
         }
 
         if (CrossPlatformInputManager.GetAxis("Horizontal") != 0) {
@@ -41,6 +33,8 @@ public class Player : NetworkBehaviour {
 
     public override void OnStartLocalPlayer () {
 
+        Camera myCamera;
         myCamera = GetComponentInChildren<Camera>();
+        myCamera.enabled = true;
     }
 }
